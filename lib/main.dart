@@ -1,5 +1,6 @@
 import 'package:chat_app/screens/home_screen.dart';
 import 'package:chat_app/screens/login_screen.dart';
+import 'package:chat_app/shared/constants.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'firebase_options.dart';
@@ -45,7 +46,8 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        primaryColor: Constants().primaryColor,
+        scaffoldBackgroundColor: Colors.white,
         useMaterial3: true,
       ),
       home: _isSignedIn ? const HomeScreen() : const LoginScreen(),
