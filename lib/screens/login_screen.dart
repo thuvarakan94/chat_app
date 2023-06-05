@@ -104,7 +104,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 backgroundColor: Theme.of(context).primaryColor,
                                 elevation: 0,
                                 shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30))),
+                                    borderRadius: BorderRadius.circular(10))),
                             child: const Text(
                               "Sign In",
                               style:

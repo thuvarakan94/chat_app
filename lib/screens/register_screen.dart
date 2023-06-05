@@ -47,7 +47,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             "Create your account now to chat and communicate",
                             style: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.w400)),
-                        Image.asset("assets/register.png"),
+                        Image.asset("assets/registration.png"),
                         TextFormField(
                           decoration: textInputDecoration.copyWith(
                               labelText: "Full Name",
@@ -125,7 +125,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                 backgroundColor: Theme.of(context).primaryColor,
                                 elevation: 0,
                                 shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(30))),
+                                    borderRadius: BorderRadius.circular(10))),
                             child: const Text(
                               "Register",
                               style:
