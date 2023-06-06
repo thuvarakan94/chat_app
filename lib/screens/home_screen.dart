@@ -6,6 +6,7 @@ import 'package:chat_app/services/auth_service.dart';
 import 'package:chat_app/services/database_service.dart';
 import 'package:chat_app/widgets/group_tile.dart';
 import 'package:chat_app/widgets/main_widget.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +29,26 @@ class _HomeScreenState extends State<HomeScreen> {
   void initState() {
     super.initState();
     gettingUserData();
+  }
+
+  void setStatus(String status) async {
+    await FirebaseFirestore.instance
+        .collection("users")
+        .doc(FirebaseAuth.instance.currentUser!.uid)
+        .update({
+      "status": status,
+    });
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    if (state == AppLifecycleState.resumed) {
+      // online
+      setStatus("Online");
+    } else {
+      // offline
+      setStatus("Offline");
+    }
   }
 
   // string manipulation
