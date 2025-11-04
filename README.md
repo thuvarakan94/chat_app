@@ -21,6 +21,7 @@ Things covered in this Chat App Task:
 - Shared Preference to keep user logged in, Create chat room ( with username) & Send message ( by username)
 - Using Stream & Stream builder
 - realtime update
+- working on notification
 
 
 <img width="339" alt="Screenshot 2023-06-06 at 12 08 34" src="https://github.com/thuvarakan94/chat_app/assets/100839883/2621350d-3346-4d84-9778-e9657233e4f8">
